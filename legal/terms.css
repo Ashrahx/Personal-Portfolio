@@ -1,0 +1,259 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #111;
+  height: 1300px;
+}
+
+main{
+  text-align: justify;
+  justify-content: center;
+}
+
+main p{
+  font-family: 'Gilroy';
+  justify-content: center;
+  margin: 0px 250px 0px 250px;
+}
+
+main h3{
+  font-family: 'Gilroy';
+  color: #fff;
+  text-align: center;
+}
+
+.title{
+margin-top: 5px;
+font-family: 'Gilroy';
+font-size: 55px;
+align-items: center;
+text-align: center;
+color: #FFFFFF;
+}
+
+.subtitle{
+  font-family: 'Gilroy';
+  margin-top: 0px;
+  color: #fff;
+  text-align: center;
+}
+
+main p{
+  font-family: 'Gilroy';
+  color: #fff;
+}
+
+/* Estilos de botón scroll */
+.menu-btn{
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+.scroll-up-btn{
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: #6202C2;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 6px;
+  border-bottom-width: 2px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.scroll-up-btn:hover{
+  filter: brightness(90%);
+}
+
+/* Estilos de encabezado y pie de página */
+.menu{
+  font-family: 'Gill Sans MT';
+  padding: 30px 0;
+}
+
+.main{
+  font-family: 'Gilroy';
+  align-items: center;
+  text-align: center;
+}
+
+
+.logo span, .logo a{
+  font-size: 35px;
+  font-family: 'Gilroy';
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header {
+  background-color: #000000;
+  color: #fff;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+nav a:hover {
+  color: #9977BC;
+}
+
+
+.button {
+  background: #6202C2;
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 20px;
+  font-family: 'Gill Sans MT';
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border: 2px solid #000000;
+  box-shadow: 8px 13px 3px rgba(0, 0, 0, 0.25);
+}
+
+/*Footer*/
+footer {
+  background-color: #000;
+  position: fixed;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  color: #fff;
+  font-family: "Muli";
+  padding-left: 100px;
+}
+
+footer span a{
+  color: #6202C2;
+  text-decoration: none;
+  font-size: 15px;
+}
+footer span a:hover{
+  text-decoration: underline;
+}
+
+.policy a{
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 15px;
+}
+
+.policy a:hover{
+  color: #9977BC;
+  transition: all 0.2s ease 0s;
+}
+
+.medias a{
+  cursor: pointer;
+  transition: all 0.2s ease 0s;
+  color: #fff;
+  margin-left: 10px;
+  font-size: 22px;
+}
+
+.medias a:hover{
+  color: #9977BC;
+}
+
+@media (max-width: 1104px) {
+  body{
+    height: 2100px;
+  }
+  main p{
+    font-family: 'Gilroy';
+    justify-content: center;
+    margin: 0px 30px 0px 30px;
+  }
+
+  .medias a{
+    font-size: 16px;
+  }
+
+  .copy{
+    font-size: 12px;
+  }
+  .policy a{
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 350px) and (max-height: 800px) {
+    footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+    footer span {
+      margin-bottom: 8px;
+    }
+    .policy {
+      display: none;
+    }
+    .medias {
+      margin-top: 8px;
+    }
+  }
+  
+  /* Ajustes para dispositivos más grandes */
+  @media only screen and (min-width: 351px) and (min-height: 801px) {
+    footer {
+      display: grid;
+      grid-template-rows: 3;
+      justify-content: center;
+    }
+    footer span {
+      margin-bottom: 0;
+    }
+    .policy a{
+      display: inline-block;
+      margin-left: 0px;
+      padding-left: 1.5rem;
+    }
+    .medias {
+      margin-top: 0;
+      text-align: center;
+      font-size: 20px;
+      padding: 0;
+    }
+  }
+  
+

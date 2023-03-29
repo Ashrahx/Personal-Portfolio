@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/formulario/login.css">
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+  <title>Sign up</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="/index.html"><span style="color: #ffff;">PORTA</span><span style="color: #34b4fc;">FOLIO</span></a>
+    </div>
+  </header>
+  <div class="login-container">
+    <form action="" class="form-login">
+      <div class="title">
+          <h2>Welcome</h2>
+      </div>
+      <label for="login-input-user" class="login__label">
+        E-mail
+      </label>
+      <input id="login-input-user" class="login__input" type="email" required placeholder="example@dominio"/>
+      <label for="login-input-password" class="login__label">
+        Password 
+        <a href="#" class="login__forgot">Forgot Password?</a>
+      </label>
+      <input id="login-input-password" class="login__input" type="password" placeholder="Enter your password" required/>
+      <label for="login-sign-up" class="login__label--checkbox">
+        <input id="login-sign-up" type="checkbox" class="login__input--checkbox" />
+        Remember me
+      </label>
+      <button class="login__submit" type="submit">Sign in</button>
+      <br>
+      <label for="checkbox" class="login__label--checkbox">
+      <input  id="checkbox"class="login__input--checkbox" type="checkbox" value="yes" required>
+      <a class="cuestion_link" href="/legal/terms.html">I accept the terms and conditions of the service.</a>
+      </label required>
+    </form>
+  </div>
+</body>
+</html>
