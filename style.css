@@ -4,6 +4,11 @@
     --lightpurple: #9977bc;
 }
 
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/.');
+}
+
 * {
   margin: 0;
   padding: 0;

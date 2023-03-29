@@ -3,6 +3,12 @@
   --lightblue: #34b4fc;
   --lightpurple: #9977bc;
 }
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('/fonts/.');
+  }
+
 * {
 	box-sizing: border-box;
 	transition: .25s all ease;
