@@ -23,7 +23,7 @@ function konamiCode(k){
     
     // Verificar si la última tecla presionada es Enter y redirigir a otra página
     if (k.keyCode === 13) {
-      window.location.href = "/index.html";
+      window.location.href = "index.html";
     }
   }
 

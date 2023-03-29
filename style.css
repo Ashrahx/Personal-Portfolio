@@ -6,9 +6,9 @@
 
 @font-face {
   font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-Black.ttf'), 
-  url('/fonts/Gilroy-ExtraBold.otf'), 
-  url('/fonts/Gilroy-Light.otf'),
+  src: url('fonts/Gilroy-Black.ttf'), 
+  url('fonts/Gilroy-ExtraBold.otf'), 
+  url('fonts/Gilroy-Light.otf'),
 }
 
 * {
@@ -832,6 +832,38 @@ footer span a:hover {
   
   /* Ajustes para dispositivos más grandes */
   @media only screen and (min-width: 351px) and (min-height: 801px) {
+    .home {
+      background: url("images/background-mobile.png") no-repeat center;
+    }
+    .home-content {
+      margin-left: 60px;
+      margin-top: 100px;
+    }
+    footer {
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 15px 23px;
+      font-size: 16px;
+      height: 180px;
+    }
+    footer span {
+      margin-bottom: 0;
+    }
+    .policy a{
+      display: inline-block;
+      margin-left: 50px;
+    }
+    .medias {
+      margin-top: 0;
+      text-align: center;
+      font-size: 30px;
+    }
+
+
+  }
+
+   /* Ajustes para dispositivos móviles */
+   @media only screen and (max-width: 767px) {
     .home {
       background: url("images/background-mobile.png") no-repeat center;
     }
