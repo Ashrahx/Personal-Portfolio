@@ -7,9 +7,9 @@
 
   @font-face {
     font-family: 'Gilroy';
-    src: url('fonts/Gilroy-Black.ttf'), 
-    url('fonts/Gilroy-ExtraBold.otf'), 
-    url('fonts/Gilroy-Light.otf'),
+    src: url('../fonts/Gilroy-Black.ttf'), 
+    url('../fonts/Gilroy-ExtraBold.otf'), 
+    url('../fonts/Gilroy-Light.otf'),
   }
   
   .center h1{
