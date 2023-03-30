@@ -217,8 +217,6 @@ ul li:before {
   background: var(--color-brand-accent-bg);
   width: 100%;
   height: 100%;
-  transform: skew(0deg, 10deg);
-  background-image: url("");
 }
 .c-services__item {
   background: #fff;
@@ -382,7 +380,9 @@ footer {
 .legal a{
   text-decoration: none;
   color: #fff;
+  padding: 10px;
   transition: all 0.2s;
+  z-index: 10;
 }
 
 .legal a:hover{

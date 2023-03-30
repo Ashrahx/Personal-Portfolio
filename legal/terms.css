@@ -244,10 +244,16 @@ footer span a:hover{
   /* Ajustes para dispositivos más grandes */
   @media only screen and (min-width: 351px) and (min-height: 801px) {
     footer {
+      background-color: #000;
+      position: fixed;
+      /* grid-template-columns: 1fr 1fr 1fr; */
       display: grid;
-      grid-template-rows: 3;
-      justify-content: center;
-    }
+      grid-template-columns: auto;
+      width: 100%;
+      color: #fff;
+      font-family: "Muli";
+      padding: 0px;
+  }
     footer span {
       margin-bottom: 0;
     }
