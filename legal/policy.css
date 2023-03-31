@@ -243,7 +243,6 @@ footer span a:hover{
 }
 
 /* Ajustes para dispositivos más grandes */
-/* Ajustes para dispositivos más grandes */
 @media only screen and (min-width: 351px) and (min-height: 801px) {
   footer {
     background-color: #000;
