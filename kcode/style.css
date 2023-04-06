@@ -201,7 +201,7 @@ p {
 }
 
 .profile-social-links li a:hover{
-  color: #9977bc;
+  background-color: #9977bc;
 }
 
 @-webkit-keyframes init {
