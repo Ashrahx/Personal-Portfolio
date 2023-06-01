@@ -17,6 +17,16 @@
   line-height: 1.6;
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('fonts/Gilroy-ExtraBold.otf'),
+  url('fonts/Gilroy-Light.otf');
+  font-weight: normal;
+  font-style: normal;
+  font-family: sans-serif;
+  }
+
 @media (min-width: 40.625em) {
   :root {
     --s0: calc(1.25rem + 0.333vw);
