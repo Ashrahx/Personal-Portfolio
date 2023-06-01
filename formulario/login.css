@@ -5,15 +5,17 @@
 }
 
 @font-face {
-	font-family: 'Gilroy';
-	src: url('../fonts/Gilroy-Black.ttf'), 
-	url('../fonts/Gilroy-ExtraBold.otf'), 
-	url('../fonts/Gilroy-Light.otf'),
+  font-family: 'Gilroy';
+  src: url('fonts/Gilroy-ExtraBold.otf'),
+  url('fonts/Gilroy-Light.otf');
+  font-weight: normal;
+  font-style: normal;
+  font-family: sans-serif;
   }
 
 * {
-	box-sizing: border-box;
-	transition: .25s all ease;
+  box-sizing: border-box;
+  transition: .25s all ease;
   margin: 0;
   padding: 0;
 }
