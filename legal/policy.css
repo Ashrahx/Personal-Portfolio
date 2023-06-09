@@ -5,8 +5,8 @@
 
 @font-face {
   font-family: 'Gilroy';
-  src: url('fonts/Gilroy-ExtraBold.otf'),
-  url('fonts/Gilroy-Light.otf');
+  src: url('../fonts/Gilroy-ExtraBold.otf'),
+  url('../fonts/Gilroy-Light.otf');
   font-weight: normal;
   font-style: normal;
   font-family: sans-serif;
