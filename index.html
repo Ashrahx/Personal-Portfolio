@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://kit.fontawesome.com/7af13692c6.css" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/7af13692c6.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon"/>
+    <script src="./javascripts/script.js" defer></script>
 </head>
 <body>
     <div class="scroll-up-btn" title="Go up to start">
@@ -250,26 +251,31 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form method="post" id="contact-form">
+                    <form action="" id="contact-form">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" name="name" id="name" required>
+                                <input type="text" placeholder="Name" id="name" required>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" name="email" id="email" required>
+                                <input type="email" placeholder="Email" id="email" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Subject" name="subject" required>
+                            <input type="text" placeholder="Subject" id="subject" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." name="message" id="message" required></textarea>
+                            <textarea cols="30" rows="10" placeholder="Message.."  id="message" required></textarea>
                         </div>
                         <div class="button-area">
                             <button type="submit">Send message</button>
                         </div>
                     </form>
                 </div>
+                <div id="popover" class="popover">
+                    <span class="close" onclick="cerrarPopover()">&times;</span>
+                    <h2>Message sent</h2>
+                    <p>Your message has been sent successfully.</p>
+                  </div>
             </div>
         </div>
     </section>
@@ -336,10 +342,7 @@
         </div>
       </footer>
     
-
-    <script src="./javascripts/script.js"></script>
-    <script type="module" src="./javascripts/database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+      <script src="./javascripts/database.js"></script>
 </body>
 </html>

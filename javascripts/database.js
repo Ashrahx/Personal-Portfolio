@@ -1,45 +1,62 @@
-// Firebase
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js";
-const firebaseConfig = {
-    apiKey: "AIzaSyBn23XPatdtlX5sOKlyyz9y_Aq9hi9QMR0",
-    authDomain: "portfolio-2a160.firebaseapp.com",
-    projectId: "portfolio-2a160",
-    storageBucket: "portfolio-2a160.appspot.com",
-    messagingSenderId: "4733360869",
-    appId: "1:4733360869:web:76d33a86f990c04bbf520c",
-    measurementId: "G-CHB0NSNBDV"
-};
-
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
-// Referencia a la base de datos
-const db = firebase.firestore();
-
-// Envío del formulario
-const contactForm = document.getElementById("contact-form");
-
-contactForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
-  const subject = document.querySelector('input[name="subject"]').value;
-
-  // Agrega la información a Firestore
-  await db.collection("contact").add({
-    name: name,
-    email: email,
-    message: message,
-    subject: subject,
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+  
+    var name = getElementVal("name");
+    var email = getElementVal("email");
+    var message = getElementVal("message");
+    var subject = getElementVal("subject");
+  
+    saveMessages(name, email, message, subject);
+  
+    // Agregar una clase al botón para cambiar su apariencia
+    document.querySelector('button[type="submit"]').classList.add("enviado");
+  
+    // Restablecer el formulario
+    document.getElementById("contact-form").reset();
+  
+    // Mostrar el popover
+    document.getElementById("popover").style.display = "block";
   });
   
-
-  // Limpia el formulario después de enviar
-  document.getElementById("name").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("message").value = "";
-
-  alert("Message sent");
-});
+  // En la función cerrarPopover
+  function cerrarPopover() {
+    // Ocultar el popover cuando se hace clic en el botón de cierre
+    document.getElementById("popover").style.display = "none";
+  
+    // Eliminar la clase del botón
+    document.querySelector('button[type="submit"]').classList.remove("enviado");
+  }
+  
+  const firebaseConfig = {
+    apiKey: "AIzaSyDfF5Io-IxZgj8EeB309JkeaClFuB3U4ck",
+    authDomain: "portfolio-72ced.firebaseapp.com",
+    databaseURL: "https://portfolio-72ced-default-rtdb.firebaseio.com",
+    projectId: "portfolio-72ced",
+    storageBucket: "portfolio-72ced.appspot.com",
+    messagingSenderId: "395507657670",
+    appId: "1:395507657670:web:b6b53979a057eae71f60c7"
+  };
+  
+  // Inicializa Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  // Haz referencia a tu base de datos
+  var contactFormDB = firebase.database().ref("portfolio");
+  
+  // Función para obtener el valor de un elemento por su ID
+  const getElementVal = (id) => {
+    return document.getElementById(id).value;
+  };
+  
+  // Función para guardar los mensajes en la base de datos
+  const saveMessages = (name, email, message, subject) => {
+    var newContactForm = contactFormDB.push();
+  
+    newContactForm.set({
+      name: name,
+      email: email,
+      message: message,
+      subject: subject,
+    });
+  };
+  

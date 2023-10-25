@@ -640,6 +640,17 @@ section .title::after {
 }
 
 /* Estilos de la sección de contacto */
+
+.alert{
+    width: 100%;
+    background: rgb(0, 255, 106);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    display: none;
+}
 .contact .title::after {
   content: "get in touch";
 }
@@ -753,6 +764,41 @@ section .title::after {
   color: var(--purple);
   background: none;
 }
+
+/* Popover */
+
+.popover {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #cc0303;
+}
+
+.popover h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.popover p {
+  font-size: 18px;
+  color: #666;
+}
+
 
 /* Footer */
 
