@@ -1,4 +1,6 @@
 // Firebase
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js";
 const firebaseConfig = {
     apiKey: "AIzaSyBn23XPatdtlX5sOKlyyz9y_Aq9hi9QMR0",
     authDomain: "portfolio-2a160.firebaseapp.com",
@@ -9,7 +11,8 @@ const firebaseConfig = {
     measurementId: "G-CHB0NSNBDV"
 };
 
-firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 // Referencia a la base de datos
 const db = firebase.firestore();
