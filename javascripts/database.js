@@ -22,13 +22,16 @@ contactForm.addEventListener("submit", async (e) => {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const message = document.getElementById("message").value;
+  const subject = document.querySelector('input[name="subject"]').value;
 
   // Agrega la información a Firestore
   await db.collection("contact").add({
     name: name,
     email: email,
     message: message,
+    subject: subject,
   });
+  
 
   // Limpia el formulario después de enviar
   document.getElementById("name").value = "";
