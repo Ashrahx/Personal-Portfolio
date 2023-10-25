@@ -250,20 +250,20 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form method="post" action="">
+                    <form method="post" action="" id="contact-form">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" placeholder="Name" id="name" required>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" placeholder="Email" id="email" required>
                             </div>
                         </div>
                         <div class="field">
                             <input type="text" placeholder="Subject" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                            <textarea cols="30" rows="10" placeholder="Message.." id="message" required></textarea>
                         </div>
                         <div class="button-area">
                             <button type="submit">Send message</button>
@@ -338,5 +338,7 @@
     
 
     <script src="./javascripts/script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore.js"></script>
 </body>
 </html>

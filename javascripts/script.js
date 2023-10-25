@@ -1,3 +1,5 @@
+'use strict';
+
 $(document).ready(function(){
     $(window).scroll(function(){
         /* Barra de navegación con propiedad sticky cuando scroll */
