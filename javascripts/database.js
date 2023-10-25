@@ -1,12 +1,12 @@
 // Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyBn23XPatdtlX5sOKlyyz9y_Aq9hi9QMR0",
-  authDomain: "portfolio-2a160.firebaseapp.com",
-  projectId: "portfolio-2a160",
-  storageBucket: "portfolio-2a160.appspot.com",
-  messagingSenderId: "4733360869",
-  appId: "1:4733360869:web:76d33a86f990c04bbf520c",
-  measurementId: "G-CHB0NSNBDV",
+    apiKey: "AIzaSyBn23XPatdtlX5sOKlyyz9y_Aq9hi9QMR0",
+    authDomain: "portfolio-2a160.firebaseapp.com",
+    projectId: "portfolio-2a160",
+    storageBucket: "portfolio-2a160.appspot.com",
+    messagingSenderId: "4733360869",
+    appId: "1:4733360869:web:76d33a86f990c04bbf520c",
+    measurementId: "G-CHB0NSNBDV"
 };
 
 firebase.initializeApp(firebaseConfig);
