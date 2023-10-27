@@ -7,8 +7,7 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
     var subject = getElementVal("subject");
   
     saveMessages(name, email, message, subject);
-  
-    // Agregar una clase al botón para cambiar su apariencia
+    
     document.querySelector('button[type="submit"]').classList.add("enviado");
   
     // Restablecer el formulario
@@ -18,12 +17,11 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
     document.getElementById("popover").style.display = "block";
   });
   
-  // En la función cerrarPopover
+  // Función cerrarPopover
   function cerrarPopover() {
-    // Ocultar el popover cuando se hace clic en el botón de cierre
+    
     document.getElementById("popover").style.display = "none";
   
-    // Eliminar la clase del botón
     document.querySelector('button[type="submit"]').classList.remove("enviado");
   }
   
@@ -40,7 +38,7 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
   // Inicializa Firebase
   firebase.initializeApp(firebaseConfig);
   
-  // Haz referencia a tu base de datos
+  // Referencia a tu base de datos
   var contactFormDB = firebase.database().ref("portfolio");
   
   // Función para obtener el valor de un elemento por su ID

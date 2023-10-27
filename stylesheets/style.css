@@ -57,8 +57,7 @@ section {
 .services,
 .skills,
 .project,
-.contact,
-footer {
+.contact{
   font-family: "Gilroy";
 }
 
@@ -641,16 +640,6 @@ section .title::after {
 
 /* Estilos de la sección de contacto */
 
-.alert{
-    width: 100%;
-    background: rgb(0, 255, 106);
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 900;
-    display: none;
-}
 .contact .title::after {
   content: "get in touch";
 }
@@ -834,6 +823,7 @@ footer .content .top {
 }
 
 .content .top .logo-details {
+  font-family: "Gilroy", Helvetica;
   color: #fff;
   font-size: 30px;
 }
@@ -903,7 +893,7 @@ footer .content .top {
 
 .top .media-icons a:nth-child(5):hover {
   color: #fff;
-  background: #eb0101;
+  background: #000000;
 }
 
 footer .content .link-boxes {
@@ -922,6 +912,7 @@ footer .content .link-boxes .box {
   font-weight: 400;
   margin-bottom: 10px;
   position: relative;
+  font-family: "Gilroy";
 }
 
 .link-boxes .box .link_name::before {
@@ -940,6 +931,7 @@ footer .content .link-boxes .box {
 }
 
 .content .link-boxes .box li a {
+  font-family: Arial, Helvetica;
   color: #fff;
   font-size: 14px;
   font-weight: 300;
@@ -976,6 +968,7 @@ footer .content .link-boxes .box {
 }
 
 .link-boxes .input-box input[type="button"] {
+  font-family: Helvetica;
   color: #fff;
   display: block;
   outline: none;
@@ -1010,6 +1003,7 @@ footer .bottom-details .bottom_text {
 
 .bottom-details .bottom_text span,
 .bottom-details .bottom_text a {
+  font-family: Helvetica;
   font-size: 14px;
   font-weight: 300;
   color: #fff;
@@ -1283,4 +1277,10 @@ footer .bottom-details .bottom_text {
     margin-top: 100px;
   }
 
+}
+
+@media (max-width: 350px) {
+  .carrousel .slide .card {
+    width: 300px;
+  }
 }
