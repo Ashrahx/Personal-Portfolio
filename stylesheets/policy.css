@@ -5,12 +5,19 @@
 
 @font-face {
   font-family: 'Gilroy';
-  src: url('../fonts/Gilroy-ExtraBold.otf'),
-  url('../fonts/Gilroy-Light.otf');
-  font-weight: normal;
+  src: url('../assets/fonts/Gilroy-ExtraBold.otf');
+  font-weight: 700;
   font-style: normal;
   font-family: sans-serif;
   }
+
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('../assets/fonts/Gilroy-Light.otf');
+    font-weight: normal;
+    font-style: normal;
+    font-family: sans-serif;
+    }
 
 body{
   background-color: #111;
@@ -165,8 +172,10 @@ footer {
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
   color: #fff;
-  font-family: "Muli";
+  font-family: Arial, Helvetica;
   padding-left: 100px;
+  height: 7rem;
+  align-items: center;
 }
 
 footer span a{
@@ -178,29 +187,87 @@ footer span a:hover{
   text-decoration: underline;
 }
 
+.policy {
+  justify-content: space-between;
+}
+
 .policy a{
   color: #fff;
   text-decoration: none;
   text-align: center;
   font-size: 15px;
+  margin: 0 8px;
 }
 
 .policy a:hover{
-  color: #9977BC;
-  transition: all 0.2s ease 0s;
+  opacity: 1;
+  text-decoration: underline;
 }
 
-.medias a{
-  cursor: pointer;
-  transition: all 0.2s ease 0s;
+footer .medias a {
+  font-weight: 500;
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
   color: #fff;
-  margin-left: 10px;
-  font-size: 22px;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.4s ease;
 }
 
-.medias a:hover{
-  color: #9977BC;
+footer .medias a:nth-child(1) {
+  background: #fff;
+  color: #000;
 }
+
+footer .medias a:nth-child(1):hover {
+  color: #fff;
+  background: #004bb5;
+}
+
+footer .medias a:nth-child(2) {
+  background: #fff;
+  color: #000;
+}
+
+footer .medias a:nth-child(2):hover {
+  color: #fff;
+  background: #000;
+}
+
+footer .medias a:nth-child(3) {
+  background: #fff;
+  color: #000;
+}
+
+footer .medias a:nth-child(3):hover {
+  color: #fff;
+  background: #E1306C;
+}
+
+footer .medias a:nth-child(4) {
+  background: #fff;
+  color: #000;
+}
+
+footer .medias a:nth-child(4):hover {
+  color: #fff;
+  background: #0077B5;
+}
+
+footer .medias a:nth-child(5) {
+  background: #fff;
+  color: #000;
+}
+
+footer .medias a:nth-child(5):hover {
+  color: #fff;
+  background: #000000;
+}
+
 
 @media (max-width: 1104px) {
   body{

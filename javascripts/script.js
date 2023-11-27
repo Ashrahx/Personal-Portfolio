@@ -51,6 +51,30 @@ $(document).ready(function(){
     });
 });
 
+//Carrusel
+// owl carousel script
+$('.carousel').owlCarousel({
+    margin: 20,
+    loop: true,
+    autoplay: true,
+    autoplayTimeOut: 2000,
+    autoplayHoverPause: true,
+    responsive: {
+        0:{
+            items: 1,
+            nav: false
+        },
+        600:{
+            items: 2,
+            nav: false
+        },
+        1000:{
+            items: 3,
+            nav: false
+        }
+    }
+});
+
 // Función para cambiar el modo de color y el texto del enlace
 function toggleColorMode() {
     const root = document.documentElement;
@@ -69,4 +93,4 @@ function toggleColorMode() {
       root.style.setProperty("--lightpurple", "blue"); // Cambia el valor a uno visible para el ejemplo
       link.textContent = "Normal color mode";
     }
-  }  
+  }

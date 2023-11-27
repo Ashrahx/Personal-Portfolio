@@ -8,13 +8,28 @@
 
 @font-face {
   font-family: 'Gilroy';
-  src: url('../assets/fonts/Gilroy-Black.ttf'),
-    url('../assets/fonts/Gilroy-Light.otf'), 
-    url('../assets/fonts/Gilroy-ExtraBold.otf');
+  src: url('../assets/fonts/Gilroy-ExtraBold.otf');
+  font-weight: 700;
+  font-style: normal;
+  font-family: sans-serif;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy-Light.otf');
   font-weight: normal;
   font-style: normal;
   font-family: sans-serif;
 }
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/Gilroy-Black.ttf');
+  font-weight: 600;
+  font-style: normal;
+  font-family: sans-serif;
+}
+
 
 * {
   margin: 0;
@@ -59,7 +74,7 @@ section {
 .services,
 .skills,
 .project,
-.contact{
+.contact {
   font-family: "Gilroy";
 }
 
@@ -154,6 +169,7 @@ section .title::after {
   font-weight: 500;
   margin-left: 25px;
   transition: color 0.3s ease;
+  font-weight: 700;
 }
 
 .navbar .menu li a:hover {
@@ -329,19 +345,18 @@ section .title::after {
 }
 
 /* Estilos de la sección servicios */
-.services,
-.project {
+.services {
   color: #fff;
   background: #111;
 }
 
 .services .title::before,
-.project .title::before {
+.projects .title::before {
   background: #fff;
 }
 
 .services .title::after,
-.project .title::after {
+.projects .title::after {
   background: #111;
   content: "what i provide";
 }
@@ -494,128 +509,18 @@ section .title::after {
 }
 
 /* Estilos de la sección proyectos */
-.carrousel {
-  text-align: center;
-  margin: auto;
-  position: relative;
-  overflow: hidden;
+.projects {
+  font-family: "Gilroy";
+  color: #fff;
+  background: #111;
 }
-
-.carrousel h2 {
-  margin: 0;
-  margin-top: -27px;
-  padding: 0;
-  font-size: 16px;
-  text-align: center;
-  color: #bbbbbb;
+.projects .title {
+  color: #fff;
 }
-
-.carrousel .slides {
-  width: 400%;
-  padding-left: 0;
-  padding-top: 16px;
-  overflow: hidden;
-  list-style: none;
-  position: relative;
-  -webkit-transition: left 0.75s ease-out;
-  -moz-transition: left 0.75s ease-out;
-  -o-transition: left 0.75s ease-out;
-  transition: left 0.75s ease-out;
-}
-
-.carrousel .slides li {
-  width: 25%;
-  position: relative;
-  float: left;
-}
-
-.carrousel li img {
-  height: 150px;
-  width: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid var(--purple);
-  transition: all 0.3s ease;
-}
-
-.carrousel li .card:hover {
-  background: var(--purple);
-}
-
-.card:hover img {
-  border-color: #fff;
-}
-
-.carrousel .slidesNavigation {
-  display: block;
-  list-style: none;
-  text-align: center;
-  bottom: 0px;
-  position: absolute;
-  width: 130px;
-  left: 50%;
-  /*Centrado de elemento*/
-  margin-left: -62px;
-  /*ajustar el centrado aplicando un margen negativo de la mitad del ancho*/
-}
-
-.carrousel input {
-  display: none;
-}
-
-.carrousel .slidesNavigation label {
-  float: left;
-  margin: 6px;
-  display: block;
-  height: 20px;
-  width: 20px;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  border: 2px solid var(--purple);
-  transition: all 0.3s ease;
-  font-size: 0;
-}
-
-.text {
-  font-size: 25px;
-  font-weight: 500;
-  margin: 10px 0 7px 0;
-}
-
-/* Tienes que repetir esto con cada diapositiva */
-#radio-1:checked~.slides {
-  left: 0;
-}
-
-#radio-2:checked~.slides {
-  left: -100%;
-}
-
-#radio-3:checked~.slides {
-  left: -200%;
-}
-
-#radio-4:checked~.slides {
-  left: -300%;
-}
-
-.carrousel .slidesNavigation label:hover {
-  cursor: pointer;
-}
-
-/*Se tiene que repetir con cada diapositiva/punto */
-.carrousel #radio-1:checked~.slidesNavigation label#dotForRadio-1,
-.carrousel #radio-2:checked~.slidesNavigation label#dotForRadio-2,
-.carrousel #radio-3:checked~.slidesNavigation label#dotForRadio-3,
-.carrousel #radio-4:checked~.slidesNavigation label#dotForRadio-4 {
-  background: var(--purple);
-}
-
-.project .title::after {
+.projects .title::after{
   content: "what i do";
 }
-
-.card {
+.projects .carousel .card{
   background: #222;
   border-radius: 6px;
   padding: 25px 35px;
@@ -623,22 +528,57 @@ section .title::after {
   overflow: hidden;
   transition: all 0.3s ease;
 }
-
-.card:hover {
+.projects .carousel .card:hover{
   background: var(--purple);
 }
-
-.card .box {
+.projects .carousel .card .box{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
 }
-
-.card:hover .box {
+.projects .carousel .card:hover .box{
   transform: scale(1.05);
 }
+.projects .carousel .card .text{
+  font-size: 25px;
+  font-weight: 700;
+  margin: 10px 0 7px 0;
+}
+.projects .carousel .card img{
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--purple);
+  transition: all 0.3s ease;
+}
+.projects .carousel .card:hover img{
+  border-color: #fff;
+}
+.owl-dots{
+  text-align: center;
+  margin-top: 20px;
+}
+.owl-dot{
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none!important;
+  border-radius: 50%;
+  border: 2px solid #6202c2!important;
+  transition: all 0.3s ease;
+}
+.owl-dot.active{
+  width: 35px;
+  border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: #730adb!important;
+}
+
 
 /* Estilos de la sección de contacto */
 
