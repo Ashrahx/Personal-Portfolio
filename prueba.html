@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner con Esferas</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background-color: #111;
+            overflow: hidden;
+        }
+
+        .esfera {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            filter: blur(250px);
+        }
+
+        .esfera-superior-izquierda {
+            background-color: #34b4fc;
+            top: -267px;
+            left: -332px;
+        }
+
+        .esfera-inferior-derecha {
+            background-color: #ff00ff;
+            bottom: -395px;
+            right: -372px;
+        }
+
+        .imagen-derecha {
+            position: absolute;
+            bottom: 0;
+            left: 50px;
+            height: 100%;
+        }
+
+        @media only screen and (max-width: 600px) {
+            /* Ajusta el tamaño de las esferas y la posición de la imagen para pantallas más pequeñas */
+            .esfera {
+                width: 200px;
+                height: 200px;
+                filter: blur(100px);
+            }
+
+            .esfera-superior-izquierda {
+                top: -150px;
+                left: -180px;
+            }
+
+            .esfera-inferior-derecha {
+                bottom: -220px;
+                right: -200px;
+            }
+
+            .imagen-derecha {
+                left: 20px;
+                height: 70%; /* Ajusta el tamaño de la imagen para pantallas más pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="esfera esfera-superior-izquierda"></div>
+        <div class="esfera esfera-inferior-derecha"></div>
+        <img src="./images/ashrah.png" alt="Imagen" class="imagen-derecha">
+    </div>
+</body>
+</html>
