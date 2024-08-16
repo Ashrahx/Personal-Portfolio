@@ -90,6 +90,51 @@ for (let i = 0; i < toggleBtns.length; i++) {
   });
 }
 
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var form = event.target;
+    var formData = new FormData(form);
+
+    fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(function(response) {
+        if (response.ok) {
+            document.getElementById('modal-message').textContent = 'Thank you for your message!';
+            form.reset();
+            showModal();
+        } else {
+            response.json().then(function(data) {
+                document.getElementById('modal-message').textContent = data.error || 'Oops! Something went wrong.';
+                showModal();
+            });
+        }
+    }).catch(function(error) {
+        document.getElementById('modal-message').textContent = 'Oops! Something went wrong.';
+        showModal();
+    });
+});
+
+function showModal() {
+    var modal = document.getElementById('modal');
+    modal.style.display = 'flex';
+
+    document.getElementById('close-modal').addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
+}
+
+
 // Función para cambiar el modo de color y el texto del enlace
 function toggleColorMode() {
     const root = document.documentElement;
@@ -109,3 +154,5 @@ function toggleColorMode() {
       link.textContent = "Normal color mode";
     }
   }
+
+

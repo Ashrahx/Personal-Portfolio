@@ -13,7 +13,6 @@
     <link rel="shortcut icon" href="./assets/favicon.svg" type="svg/x-icon"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
     <script src="./assets/javascripts/script.js" defer></script>
 </head>
 <body>
@@ -351,13 +350,70 @@
                 </div>
                 
             </div>
+
+            <div class="counter-up">
+              <div class="content">
+                <div class="box">
+                  <div class="icon"><i class="fas fa-history"></i></div>
+                  <div class="counter">724</div>
+                  <div class="text">Working Hours</div>
+                </div>
+                <div class="box">
+                  <div class="icon"><i class="fas fa-code"></i></div>
+                  <div class="counter">6</div>
+                  <div class="text">Languages</div>
+                </div>
+                <div class="box">
+                  <div class="icon"><i class="fas fa-gift"></i></div>
+                  <div class="counter">10</div>
+                  <div class="text">Completed Projects</div>
+                </div>
+                <div class="box">
+                  <div class="icon"><i class="fas fa-award"></i></div>
+                  <div class="counter">5</div>
+                  <div class="text">Certifications</div>
+                </div>
+              </div>
+            </div>
         </div>
     </section>
 
     <!-- Sección de c -->
     <section class="services" id="services">
         <div class="max-width">
-            
+          <h2 class="title">My services</h2>
+            <div class="services-content">
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-circle-nodes"></i>
+                        <div class="text">API integration</div>
+                        <p>
+                          Seamlessly connect your applications with third-party services to
+                          enhance functionality and streamline processes.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-globe"></i>
+                        <div class="text">Web Development</div>
+                        <p>
+                          Build responsive and high-performing websites tailored to your business needs,
+                          ensuring a robust online presence.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-code"></i>
+                        <div class="text">User Interface Design</div>
+                        <p>
+                          Craft intuitive and visually appealing interfaces that provide a seamless user
+                          experience across all devices.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -447,31 +503,41 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="" id="contact-form">
-                        <div class="fields">
-                            <div class="field name">
-                                <input type="text" placeholder="Name" id="name" required>
-                            </div>
-                            <div class="field email">
-                                <input type="email" placeholder="Email" id="email" required>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <input type="text" placeholder="Subject" id="subject" required>
-                        </div>
-                        <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.."  id="message" required></textarea>
-                        </div>
-                        <div class="button-area">
-                            <button type="submit">Send message</button>
-                        </div>
-                    </form>
-                </div>
-                <div id="popover" class="popover">
-                    <span class="close" onclick="cerrarPopover()">&times;</span>
-                    <h2>Message sent</h2>
-                    <p>Your message has been sent successfully.</p>
+                    <form id="contact-form" action="https://formspree.io/f/xnnazdwq" method="post">
+                      <div class="fields">
+                          <div class="field name">
+                              <input type="text" name="name" placeholder="Name" id="name" required>
+                          </div>
+                          <div class="field email">
+                              <input type="email" name="email" placeholder="Email" id="email" required>
+                          </div>
+                      </div>
+                      <div class="field">
+                          <input type="text" name="subject" placeholder="Subject" id="subject" required>
+                      </div>
+                      <div class="field textarea">
+                          <textarea cols="30" rows="10" name="message" placeholder="Message.." id="message" required></textarea>
+                      </div>
+                      <div class="button-area">
+                          <button type="submit">Send message</button>
+                      </div>
+                  </form>
+                  
+
+                <div class="modal" id="modal">
+                  <div class="modal-icon">
+                    <i class="fas fa-envelope-circle-check"></i>
                   </div>
+                  <div class="modal-content">
+                      <span class="modal-title">Succesfully</span>
+                      <div class="modal-message" id="modal-message">Thank you for your message!</div>     
+                  </div>
+                  <button type="button" class="modal-close" id="close-modal">
+                      <svg aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                  </button>
+                </div>
+                
+                </div>
             </div>
         </div>
     </section>
