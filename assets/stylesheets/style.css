@@ -429,7 +429,7 @@ section .title::after {
 
 .skills-toggle.active::before {
   left: 79px;
-  width: 94px;
+  width: 85px;
 }
 
 .toggle-btn {
