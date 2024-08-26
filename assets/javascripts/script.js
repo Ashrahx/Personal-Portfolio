@@ -135,24 +135,5 @@ function showModal() {
 }
 
 
-// Función para cambiar el modo de color y el texto del enlace
-function toggleColorMode() {
-    const root = document.documentElement;
-    const link = document.getElementById("colorModeLink");
-  
-    if (root.style.getPropertyValue("--purple") === "red") {
-      // Cambia a modo normal
-      root.style.setProperty("--purple", "#6202c2");
-      root.style.setProperty("--lightblue", "#34b4fc");
-      root.style.setProperty("--lightpurple", "#9977bc");
-      link.textContent = "Color blindness mode";
-    } else {
-      // Cambia a modo daltonismo
-      root.style.setProperty("--purple", "red"); // Cambia el valor a uno visible para el ejemplo
-      root.style.setProperty("--lightblue", "green"); // Cambia el valor a uno visible para el ejemplo
-      root.style.setProperty("--lightpurple", "blue"); // Cambia el valor a uno visible para el ejemplo
-      link.textContent = "Normal color mode";
-    }
-  }
 
 
