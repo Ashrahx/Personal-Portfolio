@@ -1107,6 +1107,11 @@ footer .content .copyright-text a {
     flex-direction: column;
   }
 
+  .copyright-text {
+    margin-top: 1rem;
+    display: flex;
+  }
+
   .content .top .media-icons {
     margin-top: 16px;
   }
@@ -1143,6 +1148,10 @@ footer .content .copyright-text a {
 
   .menu-btn i.active:before {
     content: "\f00d";
+  }
+
+  .navbar-icon {
+    display: none;
   }
 
   .navbar .menu {
