@@ -9,7 +9,7 @@
   --total_font_family: "Gilroy", sans-serif;
   --btn_bg: var(--purple); 
   
-  --btn_padding: 0.6em 1em;
+  --btn_padding: 1em;
   --btn_height: 2.5em;
   --btn_border_radius: 6px;
   --btn_outline_width: 2px;
