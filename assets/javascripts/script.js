@@ -1,10 +1,6 @@
 'use strict';
 
 $(document).ready(function(){
-    
-    /* ===========================
-       FUNCIONALIDAD ORIGINAL
-       =========================== */
 
     $(window).scroll(function(){
         // Barra de navegación sticky
